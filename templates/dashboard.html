@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold">Sistema de Inventario Oxapampa</h2>
+        <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">Cerrar sesión</a>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h6 class="text-muted">Productos registrados</h6>
+                    <h3 class="fw-bold">{{ total_productos }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{{ url_for('productos') }}" class="btn btn-primary">
+        📦 Ir a Productos
+    </a>
+
+</div>
+
+{% endblock %}
